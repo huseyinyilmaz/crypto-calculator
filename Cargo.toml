@@ -1,0 +1,11 @@
+[package]
+name = "crypto-calculator"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+bench = false
+path = "src/main.rs"
+name = "calc"
+
+[dependencies]
