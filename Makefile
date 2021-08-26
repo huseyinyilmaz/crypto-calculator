@@ -18,3 +18,6 @@ build:
 
 release:
 	cargo build --release
+
+install: release
+	cargo install --path .
