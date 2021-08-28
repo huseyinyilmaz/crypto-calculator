@@ -20,4 +20,4 @@ release:
 	cargo build --release
 
 install: release
-	cargo install --path .
+	cargo install --force --path .

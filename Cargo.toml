@@ -1,5 +1,5 @@
 [package]
-name = "crypto-calculator"
+name = "crypto_calculator"
 version = "1.0.3"
 edition = "2018"
 
@@ -8,6 +8,18 @@ bench = false
 path = "src/main.rs"
 name = "calc"
 
+[lib]
+crate-type = ["cdylib", "rlib"]
+
 [dependencies]
-dialoguer = "0.8.0"
-console = "0.14.1"
+eframe = "0.14.0" # Gives us egui, epi and web+native backends
+
+serde = { version = "1", features = ["derive"], optional = true }
+
+[features]
+default = []
+http = ["eframe/http"] # Enable if you want to do http requests
+persistence = ["eframe/persistence", "serde"] # Enable if you want to persist app state on shutdown
+
+[profile.release]
+opt-level = 2 # fast and small wasm
