@@ -41,7 +41,7 @@ impl Default for App {
 
 impl epi::App for App {
     fn name(&self) -> &str {
-        "egui template"
+        "Crypto Profit Calculator"
     }
 
     /// Called by the framework to load old app state (if any).
