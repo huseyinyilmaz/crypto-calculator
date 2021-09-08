@@ -3,7 +3,7 @@ use dialoguer::{theme::ColorfulTheme, Input};
 
 fn fee(price: f64) -> f64 {
     // fee is %0.010
-    price * 0.001
+    price * 0.002
 }
 
 fn read_value(msg: &str) -> f64 {
